@@ -1,12 +1,14 @@
-import { Search, ShoppingCart, User } from "lucide-react";
+import { Search, ShoppingCart, User, LogIn, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
+import { useWishlist } from "@/contexts/WishlistContext";
+import { useCart } from "@/contexts/CartContext";
 import shionsLogo from "@/assets/shions-logo.png";
 
 const Header = () => {
-  const navItems = [
-    "Home", "Dress", "Suit Sets", "Short Kurtis", "Cotton Tops", "Co-ord Sets", "Sleeveless Kurtis", "Plus Size Kurtis"
-  ];
+  const { wishlistCount } = useWishlist();
+  const { cartCount } = useCart();
 
   return (
     <header className="w-full">
@@ -24,33 +26,90 @@ const Header = () => {
           </Button>
           
           {/* Logo */}
-          <div className="flex-1 flex justify-center">
+          {/* <div className="flex-1 flex justify-center">
             <img src={shionsLogo} alt="SHIONS" className="h-12" />
-          </div>
+          </div> */}
           
           {/* Right Icons */}
           <div className="flex items-center gap-2">
+            <Link to="/login">
+              <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
+                <LogIn className="h-5 w-5" />
+              </Button>
+            </Link>
             <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
               <User className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-primary">
-              <ShoppingCart className="h-5 w-5" />
-            </Button>
+            <Link to="/wishlist">
+              <Button variant="ghost" size="icon" className="text-foreground hover:text-primary relative">
+                <Heart className="h-5 w-5" />
+                {wishlistCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {wishlistCount > 9 ? '9+' : wishlistCount}
+                  </span>
+                )}
+              </Button>
+            </Link>
+            <Link to="/cart">
+              <Button variant="ghost" size="icon" className="text-foreground hover:text-primary relative">
+                <ShoppingCart className="h-5 w-5" />
+                {cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {cartCount > 9 ? '9+' : cartCount}
+                  </span>
+                )}
+              </Button>
+            </Link>
           </div>
         </div>
         
         {/* Navigation */}
-        <nav className="mt-4 flex justify-center">
+        <nav className="mt-4 flex justify-between items-center">
           <div className="flex items-center gap-8 overflow-x-auto">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-foreground hover:text-primary whitespace-nowrap py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-transparent hover:border-primary"
-              >
-                {item}
-              </a>
-            ))}
+            <Link
+              to="/"
+              className="text-foreground hover:text-primary whitespace-nowrap py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-transparent hover:border-primary"
+            >
+              Home
+            </Link>
+            <Link
+              to="/bridal-wears"
+              className="text-foreground hover:text-primary whitespace-nowrap py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-transparent hover:border-primary"
+            >
+              Bridal Wears
+            </Link>
+            <Link
+              to="/sarees"
+              className="text-foreground hover:text-primary whitespace-nowrap py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-transparent hover:border-primary"
+            >
+              Sarees
+            </Link>
+            <Link
+              to="/kurta-sets"
+              className="text-foreground hover:text-primary whitespace-nowrap py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-transparent hover:border-primary"
+            >
+              Kurta Sets
+            </Link>
+            <Link
+              to="/lehenga"
+              className="text-foreground hover:text-primary whitespace-nowrap py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-transparent hover:border-primary"
+            >
+              Lehenga
+            </Link>
+          </div>
+          
+          {/* Login/Signup Buttons */}
+          <div className="flex items-center gap-3">
+            <Link to="/login">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                Sign In
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button className="btn-hero">
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </nav>
       </div>

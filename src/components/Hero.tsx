@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroModel1 from "@/assets/hero-model-1.jpg";
+import heroModel1 from "@/assets/dress2.jpg";
 import { Package, Truck, Gem } from "lucide-react";
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
           {/* Features */}
           <div className="flex flex-col sm:flex-row gap-6 pt-8">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-#5F634F flex items-center justify-center">
                 <Package className="h-6 w-6 text-primary" />
               </div>
               <div>

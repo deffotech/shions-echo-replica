@@ -1,8 +1,8 @@
 import ProductCard from "./ProductCard";
-import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.jpg";
+import product1 from "@/assets/download (3).jpg";
+import product2 from "@/assets/download (4).jpg";
+import product3 from "@/assets/download (5).jpg";
+import product4 from "@/assets/lehenga designs.jpg";
 
 const ProductGrid = () => {
   const products = [
@@ -47,9 +47,9 @@ const ProductGrid = () => {
   return (
     <section className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-light text-foreground mb-4">Short Kurtis</h2>
+        <h2 className="text-4xl font-light text-foreground mb-4">lehenga</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          100% Cotton Kurtis Just made for your everyday life, Breathable Fabrics.
+        Girls Lehengas - Shop the latest collection of designer girls lehenga choli at Indya. Discover trendy and stylish options for your little fashionistas.
         </p>
       </div>
       
@@ -67,6 +67,8 @@ const ProductGrid = () => {
         ))}
       </div>
     </section>
+
+    
   );
 };
 

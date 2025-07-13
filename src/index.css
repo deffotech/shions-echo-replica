@@ -2,46 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Shions Design System - Pink/Coral aesthetic for women's fashion */
+/* Shions Design System - Burgundy aesthetic for women's fashion */
 
 @layer base {
   :root {
-    /* Background - soft pink/coral gradient */
-    --background: 350 100% 95%;
-    --background-gradient: linear-gradient(135deg, hsl(350 100% 95%), hsl(340 80% 92%));
-    --foreground: 340 50% 20%;
+    /* Background - soft burgundy gradient */
+    --background: 358 100% 95%;
+    --background-gradient: linear-gradient(135deg, #f2f4ea, #EDF0DA);
+    --foreground: 358 50% 20%;
 
-    /* Cards with subtle pink tint */
+    /* Cards with subtle burgundy tint */
     --card: 0 0% 100%;
-    --card-foreground: 340 50% 20%;
+    --card-foreground: 358 50% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 340 50% 20%;
+    --popover-foreground: 358 50% 20%;
 
-    /* Primary - coral/pink brand color */
-    --primary: 350 85% 65%;
+    /* Primary - burgundy brand color */
+    --primary: 358 67% 15%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 350 85% 60%;
+    --primary-hover: 358 67% 10%;
 
-    /* Secondary - muted pink */
-    --secondary: 350 50% 90%;
-    --secondary-foreground: 340 50% 30%;
+    /* Secondary - muted burgundy */
+    --secondary: 358 50% 90%;
+    --secondary-foreground: 358 50% 30%;
 
     /* Muted tones */
-    --muted: 350 30% 92%;
-    --muted-foreground: 340 20% 50%;
+    --muted: 358 30% 92%;
+    --muted-foreground: 358 20% 50%;
 
-    /* Accent - vibrant pink */
-    --accent: 340 80% 70%;
+    /* Accent - vibrant burgundy */
+    --accent: 358 80% 70%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders and inputs with pink tint */
-    --border: 350 30% 85%;
-    --input: 350 30% 90%;
-    --ring: 350 85% 65%;
+    /* Borders and inputs with burgundy tint */
+    --border: 358 30% 85%;
+    --input: 358 30% 90%;
+    --ring: 358 67% 15%;
 
     --radius: 0.75rem;
 
@@ -53,51 +53,51 @@
     --star: 45 100% 50%;
     
     /* Elegant gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(350 100% 95%), hsl(340 80% 90%));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(350 30% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(358 100% 95%), #f7f9ee);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(358 30% 98%));
     
-    /* Shadows with pink tint */
-    --shadow-soft: 0 4px 20px hsl(350 30% 85% / 0.3);
-    --shadow-elegant: 0 8px 32px hsl(350 40% 80% / 0.2);
+    /* Shadows with burgundy tint */
+    --shadow-soft: 0 4px 20px hsl(358 30% 85% / 0.3);
+    --shadow-elegant: 0 8px 32px hsl(358 40% 80% / 0.2);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    /* Dark mode with warm tones */
-    --background: 340 30% 8%;
-    --background-gradient: linear-gradient(135deg, hsl(340 30% 8%), hsl(330 25% 10%));
-    --foreground: 350 50% 90%;
+    /* Dark mode with brown tones */
+    --background: 25 30% 8%;
+    --background-gradient: linear-gradient(135deg, hsl(25 30% 8%), hsl(20 25% 10%));
+    --foreground: 25 50% 90%;
 
-    --card: 340 25% 12%;
-    --card-foreground: 350 50% 90%;
+    --card: 25 25% 12%;
+    --card-foreground: 25 50% 90%;
 
-    --popover: 340 25% 12%;
-    --popover-foreground: 350 50% 90%;
+    --popover: 25 25% 12%;
+    --popover-foreground: 25 50% 90%;
 
-    --primary: 350 75% 60%;
+    --primary: 25 50% 20%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 350 75% 55%;
+    --primary-hover: 25 50% 15%;
 
-    --secondary: 340 25% 18%;
-    --secondary-foreground: 350 40% 80%;
+    --secondary: 25 25% 18%;
+    --secondary-foreground: 25 40% 80%;
 
-    --muted: 340 20% 15%;
-    --muted-foreground: 340 15% 60%;
+    --muted: 25 20% 15%;
+    --muted-foreground: 25 15% 60%;
 
-    --accent: 340 70% 65%;
+    --accent: 25 70% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 340 20% 20%;
-    --input: 340 20% 18%;
-    --ring: 350 75% 60%;
+    --border: 25 20% 20%;
+    --input: 25 20% 18%;
+    --ring: 25 50% 20%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(340 30% 8%), hsl(330 25% 12%));
-    --gradient-card: linear-gradient(180deg, hsl(340 25% 12%), hsl(340 20% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 30% 8%), hsl(20 25% 12%));
+    --gradient-card: linear-gradient(180deg, hsl(25 25% 12%), hsl(25 20% 15%));
     
     --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.4);
     --shadow-elegant: 0 8px 32px hsl(0 0% 0% / 0.3);
