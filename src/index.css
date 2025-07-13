@@ -2,95 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Shions Design System - Pink/Coral aesthetic for women's fashion */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Background - soft pink/coral gradient */
+    --background: 350 100% 95%;
+    --background-gradient: linear-gradient(135deg, hsl(350 100% 95%), hsl(340 80% 92%));
+    --foreground: 340 50% 20%;
 
+    /* Cards with subtle pink tint */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 340 50% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 340 50% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - coral/pink brand color */
+    --primary: 350 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 350 85% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - muted pink */
+    --secondary: 350 50% 90%;
+    --secondary-foreground: 340 50% 30%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones */
+    --muted: 350 30% 92%;
+    --muted-foreground: 340 20% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - vibrant pink */
+    --accent: 340 80% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs with pink tint */
+    --border: 350 30% 85%;
+    --input: 350 30% 90%;
+    --ring: 350 85% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sale and special colors */
+    --sale: 15 85% 55%;
+    --sale-foreground: 0 0% 100%;
+    
+    /* Star ratings */
+    --star: 45 100% 50%;
+    
+    /* Elegant gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(350 100% 95%), hsl(340 80% 90%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(350 30% 98%));
+    
+    /* Shadows with pink tint */
+    --shadow-soft: 0 4px 20px hsl(350 30% 85% / 0.3);
+    --shadow-elegant: 0 8px 32px hsl(350 40% 80% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with warm tones */
+    --background: 340 30% 8%;
+    --background-gradient: linear-gradient(135deg, hsl(340 30% 8%), hsl(330 25% 10%));
+    --foreground: 350 50% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 340 25% 12%;
+    --card-foreground: 350 50% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 340 25% 12%;
+    --popover-foreground: 350 50% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 350 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 350 75% 55%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 340 25% 18%;
+    --secondary-foreground: 350 40% 80%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 340 20% 15%;
+    --muted-foreground: 340 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 340 70% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 340 20% 20%;
+    --input: 340 20% 18%;
+    --ring: 350 75% 60%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(340 30% 8%), hsl(330 25% 12%));
+    --gradient-card: linear-gradient(180deg, hsl(340 25% 12%), hsl(340 20% 15%));
+    
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.4);
+    --shadow-elegant: 0 8px 32px hsl(0 0% 0% / 0.3);
   }
 }
 
@@ -100,6 +110,47 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: var(--background-gradient);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Hero button variant */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary-hover text-primary-foreground;
+    @apply px-8 py-3 rounded-full font-medium transition-all duration-300;
+    @apply shadow-lg hover:shadow-xl transform hover:scale-105;
+    @apply border-2 border-primary hover:border-primary-hover;
+  }
+  
+  /* Product card styling */
+  .product-card {
+    @apply bg-card rounded-xl p-4 shadow-soft hover:shadow-elegant;
+    @apply transition-all duration-300 hover:transform hover:scale-105;
+    background: var(--gradient-card);
+  }
+  
+  /* Star rating component */
+  .star-rating {
+    @apply flex items-center gap-1;
+  }
+  
+  .star-filled {
+    @apply text-star;
+  }
+  
+  .star-empty {
+    @apply text-muted-foreground;
+  }
+  
+  /* Price styling */
+  .price-current {
+    @apply text-primary font-bold text-lg;
+  }
+  
+  .price-original {
+    @apply text-muted-foreground line-through text-sm;
   }
 }
